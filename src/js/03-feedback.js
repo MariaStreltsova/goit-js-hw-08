@@ -19,10 +19,11 @@ function onFormComplete() {
 
 function onFormSubmit(e) {
     e.preventDefault();
-    console.log(onObjectSet())
-    e.currentTarget.reset();
+    if (form.elements.email.value && form.elements.message.value) {
+        console.log(onObjectSet())
+        e.currentTarget.reset();
     localStorage.removeItem(LOCALSTORAGE_KEY);
-  
+    } 
 }
 
 function onFormShow() {
